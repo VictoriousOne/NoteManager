@@ -1,8 +1,12 @@
-{
-"notes": [
+[
     {
-        "title": "Test Title",
-        "text": "Test text"
+        "title": "Note Manager",
+        "text": "Finish Development",
+        "note_id": "5bdc"
+    },
+    {
+        "title": "Note Manager",
+        "text": "Finish Development",
+        "note_id": "dcd2"
     }
 ]
-}
