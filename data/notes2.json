@@ -1,0 +1,57 @@
+[
+    {
+        "title": "Note Manager",
+        "text": "Finish Development For Note Manager",
+        "note_id": "5bdc"
+    },
+    {
+        "title": "DB Manager",
+        "text": "Finish Development for DB Manager",
+        "note_id": "dcd2"
+    },
+    {
+        "title": "Early Dismissal",
+        "text": "Wednedsday",
+        "note_id": "b086"
+    },
+    {
+        "title": "DPS School Board",
+        "text": "Meeting this Thursday at 6",
+        "note_id": "cd0a"
+    },
+    {
+        "title": "Vacation",
+        "text": "Take vacation next week",
+        "note_id": "1046"
+    },
+    {
+        "title": "Zoom Call",
+        "text": "Remote Class",
+        "note_id": "351f"
+    },
+    {
+        "title": "Finish Project",
+        "text": "Project Due Next Week",
+        "note_id": "c95c"
+    },
+    {
+        "title": "Office Hours",
+        "text": "Advisor meeting",
+        "note_id": "eb49"
+    },
+    {
+        "title": "Test",
+        "text": "This is only a test",
+        "note_id": "6402"
+    },
+    {
+        "title": "Test2",
+        "text": "Test2",
+        "note_id": "2580"
+    },
+    {
+        "title": "Test3",
+        "text": "Test3",
+        "note_id": "c789"
+    }
+]
