@@ -32,6 +32,7 @@ const getNotes = () =>
       'Content-Type': 'application/json',
     },
   });
+  
 
 const saveNote = (note) =>
   fetch('/api/notes', {
@@ -53,7 +54,7 @@ const deleteNote = (id) =>
 const renderActiveNote = () => {
   hide(saveNoteBtn);
 
-  if (activeNote.id) {
+  if (activeNote.note_id) {
     noteTitle.setAttribute('readonly', true);
     noteText.setAttribute('readonly', true);
     noteTitle.value = activeNote.title;
@@ -83,12 +84,12 @@ const handleNoteDelete = (e) => {
   e.stopPropagation();
 
   const note = e.target;
-  const noteId = JSON.parse(note.parentElement.getAttribute('data-note')).id;
+  const noteId = JSON.parse(note.parentElement.getAttribute('data-note')).note_id;
 
-  if (activeNote.id === noteId) {
+  if (activeNote.note_id === noteId) {
     activeNote = {};
   }
-
+  console.log("Handle Node Delete Fired-----NoteID is:  " + noteId);
   deleteNote(noteId).then(() => {
     getAndRenderNotes();
     renderActiveNote();
@@ -117,7 +118,7 @@ const handleRenderSaveBtn = () => {
 };
 
 // Render the list of note titles
-const renderNoteList = async (notes) => {
+const renderNoteList = async notes => {
   let jsonNotes = await notes.json();
   if (window.location.pathname === '/notes') {
     noteList.forEach((el) => (el.innerHTML = ''));
@@ -154,6 +155,7 @@ const renderNoteList = async (notes) => {
     return liEl;
   };
 
+  console.log("Notes lenght is " + jsonNotes.length);
   if (jsonNotes.length === 0) {
     noteListItems.push(createLi('No saved Notes', false));
   }
@@ -161,7 +163,7 @@ const renderNoteList = async (notes) => {
   jsonNotes.forEach((note) => {
     const li = createLi(note.title);
     li.dataset.note = JSON.stringify(note);
-
+    console.log("Dataset is " + li.dataset.note);
     noteListItems.push(li);
   });
 
@@ -172,6 +174,7 @@ const renderNoteList = async (notes) => {
 
 // Gets notes from the db and renders them to the sidebar
 const getAndRenderNotes = () => getNotes().then(renderNoteList);
+
 
 if (window.location.pathname === '/notes') {
   saveNoteBtn.addEventListener('click', handleNoteSave);
