@@ -11,7 +11,7 @@ This is a commandline application that allows a business owner to write and save
 * [Contributions](#contributions)
 * [License](#license)
 * [Technologies](#technologies)
-* [Screen Shot](#screen shot)
+* [Snapshot](#snapshot)
 * [Questions](#questions)
 
 ## Installation
@@ -29,7 +29,7 @@ The product is licensed under GNU
 ## Technologies
 Javascript, CSS, Node, Express, Heroku
 
-## Screen Shot
+## Snapshot
 
 ![NoteTaker](https://user-images.githubusercontent.com/71474934/155861539-c9483c28-d7d1-47b0-9952-c749dd397e87.jpg)
 
